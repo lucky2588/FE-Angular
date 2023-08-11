@@ -1,0 +1,25 @@
+<header>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+    <div>
+        <a href="" class="navbar-brand">My Github</a></div>
+
+        <ul class="navbar-nav">
+            <li *ngIf ="hardcodeAuthetication.isLoggedUser()"><a  routerLink="/welcome/Thang" class="nav-link"> Welcome</a></li>
+            <li *ngIf ="hardcodeAuthetication.isLoggedUser()"><a routerLink="/todoApp" class="nav-link"> App Todos</a></li>
+
+        </ul>
+
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li  *ngIf ="!hardcodeAuthetication.isLoggedUser()"><a  routerLink="/login" class="btn btn-primary nav-link"> Login</a></li>
+            <li  *ngIf ="hardcodeAuthetication.isLoggedUser()"><a  routerLink="/logout" class="btn btn-danger nav-link"> Logout</a></li>
+        </ul>
+
+
+
+</nav>
+
+
+</header>
