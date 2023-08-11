@@ -1,0 +1,41 @@
+
+<div class="alert alert-warning" *ngIf="message">{{message}}</div>
+<h1>My Todos</h1>
+<div class="container">
+<table class="table">
+
+  <thead>
+
+    <tr>
+      <th> id </th>
+      <th> name </th>
+      <th> Description </th>
+      <th> Status </th>
+      <th> Date </th>
+      <th class="mx-3"> Update </th>
+      <th class="mx-3"> Delete </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todo of todos">
+      <td > {{todo.id}} </td>
+      <td> {{todo.username}} </td>
+      <td> {{todo.description}}</td>
+      <td> {{todo.isDone}}</td>
+      <td > {{todo.time | date}}</td>
+      <td>
+
+        <button  class="btn btn-primary" (click)="updateTodoById(todo.id)" >Update</button>
+
+      <td>
+
+
+        <button class="btn btn-warning mx-3" (click)="deleteById(todo.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+ <div class="row">
+    <button class="btn btn-primary" (click)="addTodo()">Create Todo</button>
+ </div>
+</div>
