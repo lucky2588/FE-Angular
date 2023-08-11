@@ -1,0 +1,38 @@
+<section class="section">
+  <div class="card">
+      <div class="card-header">
+          <h4 class="card-title">Information Todo</h4>
+      </div>
+
+  <div class="card-body">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="basicInput"> Name </label>
+                <input type="text" class="form-control" id="basicInput" placeholder="Input Title" required="required" [(ngModel)]="todo.username">
+            </div>
+            <div class="form-group">
+              <label for="basicInput"> Dercesition </label>
+              <input type="text" class="form-control" id="basicInput" placeholder="Input Title "  required="required" [(ngModel)]="todo.description" >
+          </div>
+            <div class="form-group">
+                <label for="helperText"> Date</label>
+                <input type="text" id="helperText" class="form-control" placeholder="Name"  required="required"  [(ngModel)]="todo.time"
+                >
+            </div>
+            <div class="form-group">
+              <label for="helpInputTop">Status</label>
+
+              <input type="selec" class="form-control" id="helpInputTop" >
+          </div>
+        </div>
+
+
+    </div>
+</div>
+
+<button type="submit"  class="btn btn-primary" (click)="updateTodoById()" >Save</button>
+
+  </div>
+
+</section>
