@@ -37,7 +37,7 @@ export class BasicAuthenticationService {
       Authorization: basicAuthHeaderString
     })
 
-    return this.http.get<AuthenticationBean>(
+    return this.http.get<Account>(
       `${API_URL}/login/basicAuth`,
       { headers }).pipe(
         map(
@@ -47,7 +47,9 @@ export class BasicAuthenticationService {
             return data;
           }
         )
-      );
+
+      )
+
     //console.log("Execute Hello World Bean Service")
   }
 
@@ -73,6 +75,9 @@ export class BasicAuthenticationService {
 
 }
 
-export class AuthenticationBean {
-  constructor(public message: string) { }
+export class Account {
+  constructor(public username: string,
+    public password : string
+
+    ) { }
 }
